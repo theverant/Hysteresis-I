@@ -11,7 +11,7 @@ int servoAngles[4] = {90, 90, 90, 90}; // Start centered
 
 // Joystick config
 const int deadzone = 75;
-const int joystickCenter = 512;
+const int joystickCenter = 360;
 const int joystickStep = 2;
 
 void setup() {
