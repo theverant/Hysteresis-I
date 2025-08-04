@@ -6,7 +6,7 @@
       .meta-value { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #2a2a2a; }
     </style>
   </defs>
- ![Description]assets/images/titleBox.svg
+ ![Description] assets/images/titleBox.svg
   <!-- Background -->
   <rect width="800" height="150" fill="#f8f6f0"/>
   
