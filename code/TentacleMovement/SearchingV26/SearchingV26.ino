@@ -1,11 +1,12 @@
 /*
-  Searching V26
-  Four-state behavioral system: Rest, Seek, Search, Return
+  Searching V27
+  Fixed SEARCH to explore at perimeter with irregular patterns
   Created by Theverant with essential help from Claude Opus 4
   Date: 2025-08-03
   License: GPLv3
 
   Changelog:
+  - v27: SEARCH now stays at perimeter with irregular, elongated circles
   - v26: Four-state system (Rest/Seek/Search/Return) with clear transitions
   - v25: Energy/gravity model - rest position has gravitational pull
   - v24: Two-tier search with major/minor circles, dual memory systems
@@ -57,10 +58,13 @@ float seekTargetY = 90.0;
 float seekPhase = 0.0;            // For winding path
 float seekProgress = 0.0;         // 0 to 1 progress
 
+// Search state variables
+float searchCenterX = 90.0;       // Where we're searching around
+float searchCenterY = 90.0;       // Local center of search
+
 // Major circle parameters
 float majorPhase = 0.0;           // Position along major circle
 float majorDirection = 1.0;       // 1 or -1 for direction
-float currentRadius = 60.0;       // Current search radius
 
 // Minor circle parameters  
 float minorPhase = 0.0;           // Position in minor circle
@@ -101,8 +105,8 @@ void setup() {
   servoY.attach(servoYPin);
   
   Serial.begin(9600);
-  Serial.println("Searching V26 - Four State System");
-  Serial.println("REST -> SEEK -> SEARCH -> RETURN");
+  Serial.println("Searching V27 - Perimeter Search");
+  Serial.println("REST -> SEEK -> SEARCH(at edge) -> RETURN");
 }
 
 void loop() {
@@ -185,6 +189,8 @@ void updateSeek() {
   // Transition to SEARCH when arrived
   if (seekProgress >= 1.0) {
     currentState = SEARCH;
+    searchCenterX = xAngle;  // Search around where we arrived
+    searchCenterY = yAngle;
     majorPhase = atan2(seekTargetY - 90, seekTargetX - 90);  // Start search at arrival angle
     Serial.println("SEEK -> SEARCH");
   }
@@ -199,53 +205,65 @@ void updateSeek() {
 }
 
 void updateSearch() {
-  // Full search behavior at perimeter
-  // Update major circle position
+  // Irregular search patterns at perimeter
   majorPhase += majorSpeed * majorDirection;
   
-  // Handle reversals
+  // Handle reversals for incomplete circles
   if (inReversal) {
     reversalCounter += abs(majorSpeed);
     
-    if (reversalCounter >= random(10, maxReversalSectors * 100) / 100.0) {
+    if (reversalCounter >= random(5, maxReversalSectors * 80) / 100.0) {
       majorDirection *= -1;
       inReversal = false;
       reversalCounter = 0;
     }
   } else {
-    if (random(1000) < 8) {
+    if (random(800) < 12) {  // More frequent reversals for incomplete circles
       majorDirection *= -1;
       inReversal = true;
       reversalCounter = 0;
     }
   }
   
-  // Update minor circle
-  minorPhase += minorSpeed * minorDirection;
+  // Update minor circle with variable speed
+  float minorSpeedVar = minorSpeed * (0.7 + random(60) / 100.0);  // 0.7x to 1.3x
+  minorPhase += minorSpeedVar * minorDirection;
   
   // Local memory changes
   localMemory += 0.1;
   if (localMemory > maxLocalMemory) {
     minorDirection *= -1;
-    minorRadius = 8.0 + random(100) / 10.0;
+    minorRadius = 6.0 + random(120) / 10.0;  // 6-18 radius variation
     localMemory = 0;
   }
   
-  // Calculate position
-  float majorX = cos(majorPhase) * currentRadius;
-  float majorY = sin(majorPhase) * currentRadius * 0.8;
+  // Calculate irregular circles with elongation
+  float elongation = 0.6 + sin(majorPhase * 2.3) * 0.3;  // 0.3 to 0.9
+  float radiusVariation = sin(majorPhase * 3.7) * 8.0;  // ±8 variation
   
+  // Major movement - smaller local circles at perimeter
+  float localRadius = 25.0 + radiusVariation;
+  float majorX = cos(majorPhase) * localRadius;
+  float majorY = sin(majorPhase) * localRadius * elongation;
+  
+  // Rotate the elongated circle for variety
+  float rotation = majorPhase * 0.3;
+  float rotX = majorX * cos(rotation) - majorY * sin(rotation);
+  float rotY = majorX * sin(rotation) + majorY * cos(rotation);
+  
+  // Minor circles with their own irregularity
   float minorX = cos(minorPhase) * minorRadius;
-  float minorY = sin(minorPhase) * minorRadius;
+  float minorY = sin(minorPhase) * minorRadius * (0.8 + sin(minorPhase * 4.1) * 0.2);
   
-  float xTarget = 90.0 + majorX + minorX;
-  float yTarget = 90.0 + majorY + minorY;
+  // Position relative to search center (perimeter location)
+  float xTarget = searchCenterX + rotX + minorX;
+  float yTarget = searchCenterY + rotY + minorY;
   
   xTarget = constrain(xTarget, xMin, xMax);
   yTarget = constrain(yTarget, yMin, yMax);
   
   // Slow energy drain while searching
-  energy -= 0.03;
+  energy -= 0.025;
   
   // Transition to RETURN when exhausted
   if (energy <= 20.0) {
@@ -253,9 +271,10 @@ void updateSearch() {
     Serial.println("SEARCH -> RETURN");
   }
   
-  // Apply movement
-  xAngle += (xTarget - xAngle) * 0.12;
-  yAngle += (yTarget - yAngle) * 0.12;
+  // Apply movement with variable smoothing
+  float smoothVar = 0.08 + random(80) / 1000.0;  // 0.08 to 0.16
+  xAngle += (xTarget - xAngle) * smoothVar;
+  yAngle += (yTarget - yAngle) * smoothVar;
   
   servoX.write(constrain(xAngle, 0, 180));
   servoY.write(constrain(yAngle, 0, 180));
@@ -264,27 +283,18 @@ void updateSearch() {
 void updateReturn() {
   // Being pulled back to center while resisting
   // Gravity increases as energy depletes
-  float gravityPull = (1.0 - energy / 100.0) * 0.02;  // Stronger pull when tired
-  
-  // Shrink major radius
-  currentRadius -= 0.3;
-  if (currentRadius < 10.0) currentRadius = 10.0;
+  float gravityPull = (1.0 - energy / 100.0) * 0.015;  // Stronger pull when tired
   
   // Continue minor circles but weakening
   minorPhase += minorSpeed * minorDirection * 0.5;  // Half speed
   float resistX = cos(minorPhase) * minorRadius * (energy / 100.0);
   float resistY = sin(minorPhase) * minorRadius * (energy / 100.0);
   
-  // Major circle still tries to move but radius shrinking
-  majorPhase += majorSpeed * majorDirection * 0.3;
-  float majorX = cos(majorPhase) * currentRadius;
-  float majorY = sin(majorPhase) * currentRadius * 0.8;
+  // Current position with resistance
+  float xTarget = xAngle + resistX;
+  float yTarget = yAngle + resistY;
   
-  // Combined position with gravity pull
-  float xTarget = 90.0 + majorX + resistX;
-  float yTarget = 90.0 + majorY + resistY;
-  
-  // Apply gravity
+  // Apply gravity pull toward center
   xTarget = xTarget * (1.0 - gravityPull) + restPosition * gravityPull;
   yTarget = yTarget * (1.0 - gravityPull) + restPosition * gravityPull;
   
@@ -296,7 +306,6 @@ void updateReturn() {
   if (distFromRest < 15.0 && energy <= 5.0) {
     currentState = REST;
     energy = 0.0;
-    currentRadius = 60.0;  // Reset for next cycle
     Serial.println("RETURN -> REST");
   }
   

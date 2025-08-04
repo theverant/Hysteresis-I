@@ -15,11 +15,11 @@
   
   <!-- Title section (full width) -->
   <rect x="10" y="10" width="780" height="40" fill="none" stroke="#2a2a2a" stroke-width="2"/>
-  <text x="400" y="35" class="title-text" font-size="20" text-anchor="middle">ELECTROMAGNETIC FIELD VISUALIZATION APPARATUS</text>
+  <text x="400" y="35" class="title-text" font-size="20" text-anchor="middle">HYTERSIS: ELECTROMAGNETIC FIELD VISUALIZATION APPARATUS</text>
   
   <!-- Subtitle section (full width) -->
   <rect x="10" y="50" width="780" height="30" fill="none" stroke="#2a2a2a" stroke-width="1"/>
-  <text x="400" y="70" class="title-text" font-size="16" text-anchor="middle">KINETIC TENTACLE ASSEMBLY - TECHNICAL SPECIFICATION</text>
+  <text x="400" y="70" class="title-text" font-size="16" text-anchor="middle">CYBERNETIC LIFEFORMS</text>
   
   <!-- Metadata grid -->
   <line x1="10" y1="80" x2="790" y2="80" stroke="#2a2a2a" stroke-width="1"/>
