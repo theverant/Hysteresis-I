@@ -40,7 +40,9 @@
   <text x="730" y="125" class="meta-label" font-size="10" text-anchor="middle">PAGE 1 OF 10</text>
 
 </svg>
+
 ![Title Box](/assets/images/titleBox.svg)
+
 ## _Hysteresis_ - When Matter Learns to Remember
 
 > **Hysteresis** transforms the secret life of gravitational and electromagnetic fields into visible entanglement through robotic tentacles that search, discover, and respond to forces around them. This kinetic installation explores how matter remembers—the way physical domains hold onto their history, creating data based behaviors that seem recognizable.
