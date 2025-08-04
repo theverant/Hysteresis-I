@@ -23,29 +23,22 @@
   
   <!-- Metadata grid -->
   <line x1="10" y1="80" x2="790" y2="80" stroke="#2a2a2a" stroke-width="1"/>
+<text x="415" y="130" class="meta-label">PREPARED BY:</text>
+  <text x="515" y="130" class="meta-value">THEVERANT</text>
+
   <line x1="400" y1="80" x2="400" y2="140" stroke="#2a2a2a" stroke-width="1"/>
-  <line x1="10" y1="110" x2="790" y2="110" stroke="#2a2a2a" stroke-width="1"/>
-  
-  <!-- Left column metadata -->
-  <text x="25" y="100" class="meta-label">DATE:</text>
-  <text x="75" y="100" class="meta-value">AUGUST 2025</text>
-  
-  <text x="25" y="130" class="meta-label">CLASSIFICATION:</text>
+<text x="25" y="130" class="meta-label">CLASSIFICATION:</text>
   <text x="135" y="130" class="meta-value">RESEARCH &amp; DEVELOPMENT</text>
-  
-  <!-- Right column metadata -->
+  <line x1="10" y1="110" x2="790" y2="110" stroke="#2a2a2a" stroke-width="1"/>
+<text x="25" y="100" class="meta-label">DATE:</text>
+  <text x="75" y="100" class="meta-value">AUGUST 2025</text>
   <text x="415" y="100" class="meta-label">PAGES:</text>
   <text x="470" y="100" class="meta-value">10</text>
-  
-  <text x="415" y="130" class="meta-label">PREPARED BY:</text>
-  <text x="515" y="130" class="meta-value">THEVERANT</text>
-  
   <text x="620" y="100" class="meta-label">REV:</text>
   <text x="655" y="100" class="meta-value">A</text>
-  
-  <!-- Corner detail -->
   <rect x="680" y="110" width="100" height="20" fill="none" stroke="#2a2a2a" stroke-width="1"/>
   <text x="730" y="125" class="meta-label" font-size="10" text-anchor="middle">PAGE 1 OF 10</text>
+
 </svg>
 
 # Hysteresis - When Matter Learns to Remember
