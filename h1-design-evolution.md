@@ -2,7 +2,7 @@
 
 ## Evolutionary Thesis
 
-The physical evolution of Hysteresis I traces a fascinating trajectory from purely functional engineering toward an aesthetic of synthetic consciousness. Each iteration represents not merely technical refinement, but conceptual discovery—moments when crude assemblages suddenly revealed new possibilities for cybernetic embodiment and electromagnetic expression.
+The physical evolution of Hysteresis I traces a trajectory from purely functional engineering toward an aesthetic of synthetic consciousness. Each iteration represents not merely technical refinement, but conceptual discovery—moments when crude assemblages suddenly revealed new possibilities for cybernetic embodiment and expression.
 
 This progression documents how form becomes behavior, how component arrangement influences communication capacity, and how the gradual emergence of elegant proportions parallels the development of more sophisticated interaction protocols.
 
@@ -11,18 +11,18 @@ This progression documents how form becomes behavior, how component arrangement 
 ### Phase I: Functional Discovery
 *Research genealogy: automata, cinema, and the persistence of mechanical desire*
 
-The tentacle emerged from a peculiar research obsession with **historical automata**—those delicate clockwork creatures that populated 18th-century curiosity cabinets, their brass gears and silk ribbons conspiring to make metal dance like flesh. Jacques de Vaucanson's mechanical duck, the automaton chess players, music boxes that breathed—each one a meditation on the thin boundary between mechanism and life.
+The tentacle emerged from research with **historical automata**—those delicate clockwork creatures that populated 18th-century curiosity cabinets, their brass gears and silk ribbons conspiring to make metal dance like flesh. Jacques de Vaucanson's mechanical duck, the automaton chess players, music boxes that breathed—each one a meditation on the thin boundary between mechanism and life.
 
-**Cinema kinematics** revealed how movement becomes character. Frame-by-frame analysis of creature animation, the subtle articulations that transform rigid armatures into believable biology. How tentacles writhe in classic films—the careful choreography of latex and wire that convinces audiences that rubber thinks and feels.
+**Cinema kinematics** revealed how modern processes allowed for evolutions in mechanical aperatus, allowing movement to become character. Subtle articulations transform rigid armatures into believable biology. How tentacles writhe in classic films—the careful choreography of latex and wire that convinces audiences that rubber thinks and feels.
 
-This trajectory naturally led to **classic prop making**—the practical magic of creating objects that must perform convincingly under scrutiny. Animatronics, servo-driven puppets, the engineering poetry of making things move as if they possess intention rather than programming.
+This trajectory led to **prop making**—the practical magic of creating objects that must perform convincingly under scrutiny. Animatronics, servo-driven puppets, the engineering that goes into making things move as if they possess intention rather than programming.
 
 The research suggested a lineage: entertainment mechanisms evolved into cinematic illusion, which matured into contemporary possibilities for genuine cybernetic consciousness. Each iteration asking the same fundamental question—how do you make matter behave as though it remembers being alive?
 
 ### Phase II: Anatomical Integration  
 *[Image: First structured assembly]*
 
-As behavioral patterns emerged from the initial experiments, the need for more integrated anatomy became apparent. This phase involved consolidating the sprawling breadboard arrangement into coherent physical structures that could support sustained operation while improving electromagnetic communication quality.
+As behavioral patterns emerged from the initial experiments, the need for more integrated anatomy became apparent. This phase involved consolidating the breadboard arrangement into coherent physical structures that could support sustained operation while improving electromagnetic communication quality.
 
 **Morphological Developments**: Dedicated servo mounting systems, organized LED arrays, integrated sensor positioning, and improved power distribution creating more reliable operation with enhanced movement precision.
 
