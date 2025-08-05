@@ -1,5 +1,4 @@
-# H1 Design Evolution
-*Morphological archaeology of cybernetic consciousness development*
+![Design Evolution Title Box](/assets/images/titleBox_designEvolution.svg)
 
 ## Evolutionary Thesis
 
