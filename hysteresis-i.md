@@ -28,6 +28,9 @@ The Hysteresis I species exhibits patient searching behaviors with methodical el
 **Detection Range:** 1-3 meters effective
 **Communication Method:** LED brightness modulation, color transitions, kinetic positioning
 
+![Pully Drawing](/assets/images/COAC_H1b_FullAssembly-3.svg)
+Filament pully is essential to cable routing and variant evolutions.  This pully is consistent through multiple generations.
+
 ---
 
 ## H1a Subspecies
@@ -58,11 +61,16 @@ H1a represents the foundational approach to kinetic electromagnetic communicatio
 ## H1b Subspecies
 *Two-motor Alpha Ring configuration - mechanical simplification*
 
+![Filament Wheel](/assets/images/COAC_H1b_FullAssembly-2.svg)
+Filament wheel attaches to Servo.  Pictured is c generation wheel which controls the entire axis with a single motor.  This is what made c evolution possible
+
 ### Technical Specifications
 - **Scientific Name:** *Hysteresis I b*
 - **Motor Configuration:** Dual servo with Alpha Ring mechanical amplification
 - **Unique Components:** Alpha Ring kinetic enhancement system
 - **Power Requirements:** Reduced consumption vs H1a
+
+![2 Motor Technical Drawing](/assets/images/COAC_H1b_FullAssembly-1.svg)
 
 ### Behavioral Profile
 H1b demonstrates that mechanical elegance can enhance rather than constrain electromagnetic expression. The Alpha Ring system provides kinetic amplification, enabling complex movements with fewer actuators.
