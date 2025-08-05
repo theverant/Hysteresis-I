@@ -1,11 +1,12 @@
 /*
-  Searching V27
-  Fixed SEARCH to explore at perimeter with irregular patterns
+  Searching V28
+  Master timing controls and SEEK trigger fix
   Created by Theverant with essential help from Claude Opus 4
-  Date: 2025-08-03
+  Date: 2025-08-04
   License: GPLv3
 
   Changelog:
+  - v28: Added master timing controls, SEEK triggers at 100 energy, fluid RETURN->REST
   - v27: SEARCH now stays at perimeter with irregular, elongated circles
   - v26: Four-state system (Rest/Seek/Search/Return) with clear transitions
   - v25: Energy/gravity model - rest position has gravitational pull
@@ -33,6 +34,31 @@ Servo servoY;
 
 const int servoXPin = 3;
 const int servoYPin = 5;
+
+// MASTER TIMING CONTROLS
+const float MASTER_SPEED = 1.0;  // Global speed multiplier
+
+// REST STATE TIMING
+const float REST_ENERGY_RATE = 0.5 * MASTER_SPEED;
+const float REST_PHASE_SPEED = 0.1 * MASTER_SPEED;
+const float REST_SMOOTHING = 0.1;
+
+// SEEK STATE TIMING  
+const float SEEK_ENERGY_RATE = 0.05 * MASTER_SPEED;
+const float SEEK_PROGRESS_RATE = 0.005 * MASTER_SPEED;
+const float SEEK_PHASE_SPEED = 0.08 * MASTER_SPEED;
+const float SEEK_SMOOTHING_BASE = 0.05;
+
+// SEARCH STATE TIMING
+const float SEARCH_ENERGY_RATE = 0.025 * MASTER_SPEED;
+const float SEARCH_MAJOR_SPEED = 0.0015 * MASTER_SPEED;
+const float SEARCH_MINOR_SPEED = 0.15 * MASTER_SPEED;
+const float SEARCH_SMOOTHING_BASE = 0.08;
+
+// RETURN STATE TIMING
+const float RETURN_ENERGY_RATE = 0.1 * MASTER_SPEED;
+const float RETURN_GRAVITY_BASE = 0.015 * MASTER_SPEED;
+const float RETURN_SMOOTHING_BASE = 0.08;
 
 // Current positions
 float xAngle = 90.0;
@@ -70,7 +96,6 @@ float majorDirection = 1.0;       // 1 or -1 for direction
 float minorPhase = 0.0;           // Position in minor circle
 float minorRadius = 12.0;         // Current radius of minor circles
 float minorDirection = 1.0;       // Local search direction
-const float minorSpeed = 0.15;    // Much faster than major
 
 // Rest state
 float restPhase = 0.0;            // For shiver movement
@@ -83,9 +108,6 @@ bool inReversal = false;          // Currently in reversal state
 // Memory systems
 float localMemory = 0.0;          // Local area memory
 const float maxLocalMemory = 5.0; // Local behavior change threshold
-
-// Speed parameters
-float majorSpeed = 0.0015;        // Base speed for major circle
 
 // Servo limits
 const float xMin = 5.0;
@@ -105,7 +127,7 @@ void setup() {
   servoY.attach(servoYPin);
   
   Serial.begin(9600);
-  Serial.println("Searching V27 - Perimeter Search");
+  Serial.println("Searching V28 - Master Timing Controls");
   Serial.println("REST -> SEEK -> SEARCH(at edge) -> RETURN");
 }
 
@@ -136,15 +158,15 @@ void loop() {
 
 void updateRest() {
   // Small shiver movement
-  restPhase += 0.1;
+  restPhase += REST_PHASE_SPEED;
   float shiverX = restPosition + cos(restPhase) * 3.0;
   float shiverY = restPosition + sin(restPhase * 1.3) * 2.5;
   
   // Regenerate energy
-  energy += 0.5;
+  energy += REST_ENERGY_RATE;
   
-  // Transition to SEEK when energized
-  if (energy >= 80.0) {
+  // Transition to SEEK when fully energized
+  if (energy >= 100.0) {
     // Choose a perimeter target
     float targetAngle = random(0, 628) / 100.0;  // Random angle in radians
     seekTargetX = 90.0 + cos(targetAngle) * 70.0;
@@ -159,8 +181,8 @@ void updateRest() {
   }
   
   // Apply movement
-  xAngle += (shiverX - xAngle) * 0.1;
-  yAngle += (shiverY - yAngle) * 0.1;
+  xAngle += (shiverX - xAngle) * REST_SMOOTHING;
+  yAngle += (shiverY - yAngle) * REST_SMOOTHING;
   
   xAngle = constrain(xAngle, 0, 180);
   yAngle = constrain(yAngle, 0, 180);
@@ -171,8 +193,8 @@ void updateRest() {
 
 void updateSeek() {
   // Progress toward target with winding path
-  seekProgress += 0.005;  // Takes ~4 seconds to reach target
-  seekPhase += 0.08;
+  seekProgress += SEEK_PROGRESS_RATE;
+  seekPhase += SEEK_PHASE_SPEED;
   
   // Accelerate as we get further from center
   float distFromCenter = sqrt(pow(xAngle - 90, 2) + pow(yAngle - 90, 2));
@@ -187,7 +209,7 @@ void updateSeek() {
   float targetY = restPosition + (seekTargetY - restPosition) * seekProgress + windY;
   
   // Small energy cost for seeking
-  energy -= 0.05;
+  energy -= SEEK_ENERGY_RATE;
   
   // Transition to SEARCH when arrived
   if (seekProgress >= 1.0) {
@@ -199,7 +221,7 @@ void updateSeek() {
   }
   
   // Apply movement with acceleration
-  float smoothing = 0.05 * speedBoost;
+  float smoothing = SEEK_SMOOTHING_BASE * speedBoost;
   xAngle += (targetX - xAngle) * smoothing;
   yAngle += (targetY - yAngle) * smoothing;
   
@@ -212,11 +234,11 @@ void updateSeek() {
 
 void updateSearch() {
   // Irregular search patterns at perimeter
-  majorPhase += majorSpeed * majorDirection;
+  majorPhase += SEARCH_MAJOR_SPEED * majorDirection;
   
   // Handle reversals for incomplete circles
   if (inReversal) {
-    reversalCounter += abs(majorSpeed);
+    reversalCounter += abs(SEARCH_MAJOR_SPEED);
     
     if (reversalCounter >= random(5, maxReversalSectors * 80) / 100.0) {
       majorDirection *= -1;
@@ -232,7 +254,7 @@ void updateSearch() {
   }
   
   // Update minor circle with variable speed
-  float minorSpeedVar = minorSpeed * (0.7 + random(60) / 100.0);  // 0.7x to 1.3x
+  float minorSpeedVar = SEARCH_MINOR_SPEED * (0.7 + random(60) / 100.0);  // 0.7x to 1.3x
   minorPhase += minorSpeedVar * minorDirection;
   
   // Local memory changes
@@ -269,7 +291,7 @@ void updateSearch() {
   yTarget = constrain(yTarget, yMin, yMax);
   
   // Slow energy drain while searching
-  energy -= 0.025;
+  energy -= SEARCH_ENERGY_RATE;
   
   // Transition to RETURN when exhausted
   if (energy <= 20.0) {
@@ -278,7 +300,7 @@ void updateSearch() {
   }
   
   // Apply movement with variable smoothing
-  float smoothVar = 0.08 + random(80) / 1000.0;  // 0.08 to 0.16
+  float smoothVar = SEARCH_SMOOTHING_BASE + random(80) / 1000.0;  // Base ± variation
   xAngle += (xTarget - xAngle) * smoothVar;
   yAngle += (yTarget - yAngle) * smoothVar;
   
@@ -292,10 +314,10 @@ void updateSearch() {
 void updateReturn() {
   // Being pulled back to center while resisting
   // Gravity increases as energy depletes
-  float gravityPull = (1.0 - energy / 100.0) * 0.015;  // Stronger pull when tired
+  float gravityPull = (1.0 - energy / 100.0) * RETURN_GRAVITY_BASE;
   
   // Continue minor circles but weakening
-  minorPhase += minorSpeed * minorDirection * 0.5;  // Half speed
+  minorPhase += SEARCH_MINOR_SPEED * minorDirection * 0.5;  // Half speed
   float resistX = cos(minorPhase) * minorRadius * (energy / 100.0);
   float resistY = sin(minorPhase) * minorRadius * (energy / 100.0);
   
@@ -308,21 +330,19 @@ void updateReturn() {
   yTarget = yTarget * (1.0 - gravityPull) + restPosition * gravityPull;
   
   // Continue energy drain
-  energy -= 0.1;
+  energy -= RETURN_ENERGY_RATE;
   if (energy < 0) energy = 0;  // Prevent negative energy
   
   // Check if pulled back to rest
   float distFromRest = sqrt(pow(xAngle - restPosition, 2) + pow(yAngle - restPosition, 2));
-  if (distFromRest < 15.0 || energy <= 0.0) {  // Also check for zero energy
+  if (distFromRest < 15.0 || energy <= 0.0) {
     currentState = REST;
     energy = 0.0;
-    xAngle = restPosition;  // Force position to rest
-    yAngle = restPosition;
     Serial.println("RETURN -> REST");
   }
   
   // Apply movement - slower as tired
-  float smoothing = 0.08 * (energy / 100.0 + 0.3);
+  float smoothing = RETURN_SMOOTHING_BASE * (energy / 100.0 + 0.3);
   xAngle += (xTarget - xAngle) * smoothing;
   yAngle += (yTarget - yAngle) * smoothing;
   

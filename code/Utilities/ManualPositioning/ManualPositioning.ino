@@ -2,7 +2,7 @@
 
 // === Pin Assignments ===
 const int servoXPin = 3;       // Base rotation
-const int servoYPin = 5;       // Axial tip
+const int servoYPin = 6;       // Axial tip
 const int joystickXPin = A0;
 const int joystickYPin = A1;
 const int joystickBtnPin = 2;

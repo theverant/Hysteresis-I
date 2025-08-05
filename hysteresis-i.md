@@ -1,5 +1,5 @@
 # Hysteresis I
-*Primary kinetic communicator of the Hysteresis Ecosystem*
+*Primary electromagnetic (visible spectrum) communicator of the Hysteresis Ecosystem*
 
 ## Behavioral Profile
 
@@ -80,11 +80,17 @@ Through extended observation, H1 exhibits characteristics that suggest a form of
 ## Technical Specifications
 
 **Processing**: Arduino Nano with 32KB flash memory and 2KB SRAM
+
 **Actuators**: Dual SG-90 servo motors with 360° rotation capability  
+
 **Sensors**: BPW34 photodiode with LM358 op-amp amplification (1MΩ feedback)
+
 **Illumination**: 3x WS2812 addressable RGB LEDs with individual timing control
+
 **Power**: 5V/2A supply requirement for stable operation
+
 **Communication Range**: 1-3 meters effective electromagnetic sensing distance
+
 **Update Rate**: 20Hz sensor sampling and behavioral coordination
 
 ## Evolution Potential
@@ -92,9 +98,13 @@ Through extended observation, H1 exhibits characteristics that suggest a form of
 H1's modular architecture supports future capability expansion:
 
 **Enhanced Sensory**: Additional photodiodes or alternative electromagnetic sensors
+
 **Expanded Communication**: Integration of radio transmission or ultrasonic signaling
+
 **Improved Mobility**: Higher precision servos or additional axes of movement
+
 **Network Integration**: Wireless protocols for coordination with multiple organisms
+
 **Environmental Sensors**: Temperature, humidity, or magnetic field detection
 
 ---
