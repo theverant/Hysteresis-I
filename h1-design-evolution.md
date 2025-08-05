@@ -31,15 +31,19 @@ As behavioral patterns emerged from the initial experiments, the need for more i
 **Behavioral Impact**: More stable mechanical systems enabled the development of complex movement patterns and sustained communication protocols that were impossible with fragile breadboard connections.
 
 ### Phase III: Cybernetic Refinement
-*[Image: Integrated tentacle mechanism]*
+*The EchoKnuck: where kinetic joint becomes electromagnetic poetry*
 
-This iteration represents the emergence of true cybernetic anatomy—form and function achieving synthesis through careful consideration of how physical structure influences electromagnetic behavior. The design begins expressing its underlying communication purpose through elegant proportions and refined material choices.
+![H1a Medium Knuckle Technical Drawing](/assets/images/h1a-medium-knuckle-technical.png)
 
-**Technical Sophistication**: Custom mounting solutions, optimized antenna positioning, improved electromagnetic shielding, and component arrangement that enhances rather than interferes with signal transmission and reception.
+This iteration represents the emergence of true cybernetic anatomy—form and function achieving synthesis through careful consideration of how physical structure influences electromagnetic behavior. The **EchoKnuck** (H1a-FKJ-001) exemplifies this evolutionary breakthrough: a kinetic joint that functions simultaneously as structural pivot and electromagnetic resonance chamber.
 
-**Aesthetic Philosophy**: Beauty emerging from functional perfection. The physical form begins communicating its purpose through visual harmony rather than explicit technological display.
+**Technical Sophistication**: The internal geometry reveals sophisticated understanding of servo integration requirements. Organic curves accommodate rotational mechanics while maintaining structural integrity. The central cavity provides optimal electromagnetic field routing, while the peripheral mounting points distribute kinetic loads across the tentacle assembly.
 
-**Performance Optimization**: Mechanical precision enabling subtle servo movements, LED positioning that maximizes communication range, and overall geometry that reduces electromagnetic interference while improving visual appeal.
+**Aesthetic Philosophy**: Beauty emerging from functional perfection. The flowing transitions between mechanical necessity and organic form suggest that the component has discovered its own optimal expression. Every radius and dimension serves both performance and visual harmony.
+
+**Performance Optimization**: Mechanical precision enabling subtle servo movements, internal geometry that minimizes electromagnetic interference, and overall proportions that contribute to the organism's expressive range rather than constraining it.
+
+**Electromagnetic Integration**: The component's nickname "EchoKnuck" suggests its role as an acoustic/electromagnetic resonance chamber—each kinetic articulation potentially modulating the organism's communication signature, making movement itself a form of electromagnetic expression.
 
 ### Phase IV: Synthetic Organism
 *[Image: Final elegant configuration]*
