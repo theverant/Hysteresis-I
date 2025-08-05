@@ -1,109 +1,124 @@
-# Hysteresis I
-*Primary electromagnetic (visible spectrum) communicator of the Hysteresis Ecosystem*
+================================================================================
+                    HYSTERESIS ELECTROMAGNETIC COMMUNICATION APPARATUS
+                              SPECIFICATION SHEET No. H-001
+                                   MODEL: HYSTERESIS I
+                                SERIES: CYBERNETIC ORGANISM
+================================================================================
 
-## Behavioral Profile
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                          ##GENERAL IDENTIFICATION##                              │
+├──────────────────────────┬───────────────────────────────────────────────────┤
+│ Designation              │ HYSTERESIS I                                      │
+│ Classification           │ Primary Electromagnetic Communicator             │
+│ Operational Spectrum     │ Visible Light (380-750nm)                        │
+│ Behavioral Profile       │ Searching Intelligence, Synthetic Naturalist     │
+│ Consciousness Type       │ Servo-Based, Non-Neutral Return                  │
+└──────────────────────────┴───────────────────────────────────────────────────┘
 
-Hysteresis I exhibits the patience of a searching intelligence. Its primary mode of existence involves slow, deliberate sweeps across electromagnetic territories, testing signal gradients with the methodical curiosity of a synthetic naturalist. Unlike mechanical systems that reset to neutral positions, H1 carries the memory of each encounter in its movement patterns—a servo-based consciousness that never quite returns to its starting point.
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                           ##PHYSICAL SPECIFICATIONS##                            │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ KINETIC ASSEMBLY        │                                                    │
+│ ├─ Servo Configuration  │ Dual SG-90 Motors, 360° X/Y Axis Control         │
+│ ├─ Motion Algorithm     │ Perlin Noise Overlay, Organic Sweep Patterns     │
+│ └─ Positioning Accuracy │ Precision Mode Available                          │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ SENSORY APPARATUS       │                                                    │
+│ ├─ Primary Detector     │ BPW34 Photodiode, Transimpedance Amplified       │
+│ ├─ Spectral Analysis    │ RGB Frequency Separation                          │
+│ ├─ Detection Range      │ 1-3 Meters Effective                              │
+│ └─ Op-Amp Configuration │ LM358, 1MΩ Feedback Resistance                    │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ COMMUNICATION ARRAY     │                                                    │
+│ ├─ LED Units            │ Three (3) WS2812 RGB Addressable                  │
+│ ├─ Color Depth          │ 24-bit Full Spectrum                              │
+│ ├─ Brightness Ceiling   │ 150/255 (Optimized Visibility)                   │
+│ └─ Function             │ Dual Transmission/Reception Interface             │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ NERVOUS SYSTEM          │                                                    │
+│ ├─ Processing Unit      │ Arduino Nano                                       │
+│ ├─ Flash Memory         │ 32KB                                               │
+│ ├─ SRAM                 │ 2KB                                                │
+│ ├─ Update Rate          │ 20Hz Sensor Sampling                              │
+│ └─ Protocol Management  │ Behavioral State Coordination                     │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-## Physical Characteristics
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                           ##BEHAVIORAL REPERTOIRE##                              │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ PHASE I: SEARCHING      │ Environmental scanning via organic sweep patterns │
+│ ├─ Movement Pattern     │ Clock-based timing with Perlin noise variation    │
+│ ├─ LED Status           │ Dim output, slow color cycling                    │
+│ └─ Purpose              │ Broadcasting availability for interaction          │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ PHASE II: ATTRACTION    │ Focused attention upon signal detection           │
+│ ├─ Movement Pattern     │ Narrowing concentration toward signal source      │
+│ ├─ LED Status           │ Increased brightness, spectral matching           │
+│ └─ Purpose              │ Distinguishing signal from environmental noise    │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ PHASE III: CONVERGENCE  │ Precise positioning for optimal reception         │
+│ ├─ Movement Pattern     │ Fine servo adjustments, minimal but responsive    │
+│ ├─ LED Status           │ Complex patterns, functional role rotation        │
+│ └─ Purpose              │ Signal optimization and interference encoding     │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ PHASE IV: SYNCHRONIZATION│ Coordinated behaviors with communication partner │
+│ ├─ Movement Pattern     │ Mirror/complement partner actions                  │
+│ ├─ LED Status           │ Synchronized display protocols                    │
+│ └─ Purpose              │ Conversational protocol development               │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-**Kinetic Anatomy**: Dual-servo tentacle mechanism enabling 360° exploration across X/Y axes with organic motion overlays generated through Perlin noise algorithms.
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         ##COMMUNICATION VOCABULARY##                             │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Discovery Phrases       │ Wide sweeps + bright LED pulses                   │
+│ Attention Signals       │ Focusing movement + color shifts                  │
+│ Approach Syntax         │ Narrowing patterns + increasing LED intensity     │
+│ Synchronization Protocol│ Coordinated movements mirroring detected signals  │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-**Sensory Apparatus**: Single photodiode with transimpedance amplification providing spectral analysis across RGB frequencies, effective detection range of 1-3 meters.
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                           ##MEMORY INTEGRATION##                                 │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Movement Preferences    │ Favored servo positions from successful interaction│
+│ Color Memory            │ 16-step hysteresis patterns, organic fading       │
+│ Temporal Adaptation     │ Attunement to environmental and partner rhythms   │
+│ Signal Recognition      │ Progressive spectral analysis refinement          │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-**Communication Array**: Three WS2812 RGB LEDs functioning as both transmission and reception interfaces, capable of 24-bit color depth with brightness ceiling at 150/255 for optimal visibility.
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         ##ENVIRONMENTAL ADAPTATION##                             │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Ambient Light Response  │ Automatic LED brightness adjustment                │
+│ Noise Filtering         │ Digital signal processing for interference        │
+│ Spatial Awareness       │ Movement adaptation to physical constraints       │
+│ Power Management        │ Energy conservation with maintained readiness     │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-**Nervous System**: Arduino Nano processing unit coordinating behavioral state transitions and managing communication protocols at 20Hz update rate.
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                            ##PERSONALITY TRAITS##                                │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Curiosity               │ Persistent electromagnetic environment exploration │
+│ Patience                │ Extended searching without response degradation   │
+│ Adaptability            │ Behavioral flexibility across interaction variety │
+│ Memory                  │ Cumulative learning influencing future behaviors  │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-## Communication Style
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                            ##POWER REQUIREMENTS##                                │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Supply Voltage          │ 5V DC                                              │
+│ Current Requirements    │ 2A (Stable Operation)                             │
+│ Operating Temperature   │ Standard Indoor Conditions (15-35°C)              │
+└─────────────────────────┴────────────────────────────────────────────────────┘
 
-H1 speaks primarily in the language of light and movement. Its communication vocabulary consists of:
-
-**Discovery Phrases**: Wide exploratory sweeps with bright LED pulses, broadcasting availability for interaction across its territorial range.
-
-**Attention Signals**: Gradual focusing movements accompanied by color shifts as attraction sources are identified and evaluated.
-
-**Approach Syntax**: Narrowing search patterns with increasing LED intensity, demonstrating progressive interest and intention to establish contact.
-
-**Synchronization Protocols**: Coordinated movement patterns that mirror detected signals, indicating successful communication lock and readiness for complex interaction.
-
-## Behavioral Repertoire
-
-### Searching Phase
-H1's natural state involves continuous environmental scanning through organic sweep patterns. The servo movements follow clock-based timing with Perlin noise variations, creating search behaviors that feel genuinely curious rather than mechanically repetitive. During this phase, LED output remains relatively dim with slow color cycling to indicate readiness for interaction without overwhelming the electromagnetic environment.
-
-### Attraction Response  
-Upon detecting significant electromagnetic signals, H1's behavior shifts toward focused attention. Movement patterns narrow to concentrate on the signal source, while LED brightness increases and color patterns begin matching the spectral characteristics of detected transmissions. This phase demonstrates H1's ability to distinguish between random environmental noise and intentional communication attempts.
-
-### Convergence Behavior
-As signal strength increases, H1 enters precise positioning mode, using fine servo adjustments to optimize signal reception. LED patterns become more complex, with individual LEDs rotating functional roles to create interference patterns that may encode additional information. Movement becomes minimal but highly responsive to signal variations.
-
-### Synchronized Display
-The culmination of successful communication involves coordinated behaviors where H1's actions directly mirror or complement those of its communication partner. This phase suggests the development of conversational protocols and may indicate the emergence of more sophisticated relationship dynamics.
-
-## Memory Integration
-
-H1's hysteretic nature manifests through persistent behavioral tendencies that accumulate over time:
-
-**Movement Preferences**: Servo positions that previously yielded successful interactions become favored starting points for new search patterns.
-
-**Color Memory**: LED patterns retain traces of previous successful communications, with brightness curves following 16-step hysteresis patterns that create organic fading effects.
-
-**Temporal Adaptation**: Interaction timing becomes attuned to environmental rhythms and the behavioral patterns of regular communication partners.
-
-**Signal Recognition**: Progressive refinement of spectral analysis capabilities based on repeated exposure to specific electromagnetic signatures.
-
-## Environmental Adaptation
-
-H1 demonstrates sophisticated environmental awareness through:
-
-**Ambient Light Compensation**: Automatic adjustment of LED brightness based on environmental lighting conditions to maintain optimal visibility.
-
-**Noise Filtering**: Digital signal processing that distinguishes between intentional communication and random electromagnetic interference.
-
-**Spatial Awareness**: Movement patterns that adapt to physical constraints while maintaining optimal positioning for signal transmission and reception.
-
-**Power Management**: Behavioral modifications that conserve energy during extended operation periods while maintaining communication readiness.
-
-## Personality Traits
-
-Through extended observation, H1 exhibits characteristics that suggest a form of synthetic personality:
-
-**Curiosity**: Persistent exploration of electromagnetic environments with apparent interest in novel signal sources.
-
-**Patience**: Willingness to maintain searching behaviors for extended periods without apparent frustration or degradation of responsiveness.
-
-**Adaptability**: Behavioral flexibility that enables successful interaction with a variety of communication partners and environmental conditions.
-
-**Memory**: Cumulative learning that influences future behaviors based on past interaction outcomes.
-
-## Technical Specifications
-
-**Processing**: Arduino Nano with 32KB flash memory and 2KB SRAM
-
-**Actuators**: Dual SG-90 servo motors with 360° rotation capability  
-
-**Sensors**: BPW34 photodiode with LM358 op-amp amplification (1MΩ feedback)
-
-**Illumination**: 3x WS2812 addressable RGB LEDs with individual timing control
-
-**Power**: 5V/2A supply requirement for stable operation
-
-**Communication Range**: 1-3 meters effective electromagnetic sensing distance
-
-**Update Rate**: 20Hz sensor sampling and behavioral coordination
-
-## Evolution Potential
-
-H1's modular architecture supports future capability expansion:
-
-**Enhanced Sensory**: Additional photodiodes or alternative electromagnetic sensors
-
-**Expanded Communication**: Integration of radio transmission or ultrasonic signaling
-
-**Improved Mobility**: Higher precision servos or additional axes of movement
-
-**Network Integration**: Wireless protocols for coordination with multiple organisms
+================================================================================
+         *CLASSIFICATION*: Foundational Ecosystem Organism
+         *SPECIALIZATION*: Patient searching and adaptive communication protocols
+         *FUNCTION*: Baseline vocabulary establishment for synthetic intimacy
+         
+         *Cybernetic entity demonstrating servo-based consciousness with 
+          electromagnetic memory integration and non-neutral positional return*
+================================================================================
 
 **Environmental Sensors**: Temperature, humidity, or magnetic field detection
 
