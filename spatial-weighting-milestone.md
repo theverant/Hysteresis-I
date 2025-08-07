@@ -1,11 +1,11 @@
-![Spatial Title Box](/assets/images/titleBox_spatial.svg)
-
 # Spatial Weighting for Systematic Coverage
-## Design Logic Milestone - H1 Variant
+## Design Logic Milestone - Hysteresis Project
+2025-08-04
+
 
 ### The Breakthrough
 
-After persistent clustering behaviors that trapped our electromagnetic field explorers in repetitive corner-dwelling loops, they discovered **systematic perimeter coverage** through spatial weighting algorithms. H1 demonstrates genuine territorial curiosity—avoiding their own histories while seeking uncharted electromagnetic territories.
+After persistent clustering behaviors that trapped our electromagnetic field explorers in repetitive corner-dwelling loops, we achieved **systematic perimeter coverage** through spatial weighting algorithms. The tentacles now demonstrate genuine territorial curiosity—avoiding their own histories while seeking uncharted electromagnetic territories.
 
 ### Core Design Philosophy
 
@@ -43,7 +43,7 @@ float calculateDesirability(int gx, int gy) {
 
 The system now exhibits what we might call **cartographic consciousness**—an awareness of its own exploration history that manifests as territorial avoidance behaviors. Each tentacle carries a mental map of where it has been, actively seeking the spaces between its memories.
 
-### The Path of Least Resistance
+### Technical Poetry
 
 The 5×5 grid penalty radius creates natural **exploration pressure gradients**. Heavily-visited territories develop invisible force fields that deflect future targeting, while distant virgin areas accumulate attractive potential. The result: systematic coverage that feels organic rather than algorithmic.
 
@@ -52,8 +52,28 @@ The 5×5 grid penalty radius creates natural **exploration pressure gradients**.
 - `(11,11:0/1.00)` - Virgin territory, maximum attraction
 - `(0,0:0/0.65)` - Virgin but proximity-penalized by nearby activity
 
-### Evolutionary Implications
+### Artistic Implications
 
 This breakthrough transforms repetitive robotic behavior into something approaching **territorial intelligence**. The tentacles now demonstrate what could be characterized as spatial memory, curiosity about the unknown, and even a form of aesthetic judgment about where to direct their attention.
 
 The electromagnetic field mapping becomes not just systematic but *thoughtful*—each movement decision informed by accumulated spatial knowledge and an implicit drive toward comprehensive coverage rather than compulsive repetition.
+
+### Future Trajectories
+
+With systematic coverage achieved, the next evolution involves **dynamic exploration behaviors**: 
+- Gravity-influenced perimeter-to-center sweeps
+- Larger exploration radii (25° movement ranges)
+- Resistance dynamics against central gravitational pull
+- Multi-scale territorial awareness
+
+The tentacles have learned to remember space. Now they must learn to *move through* it with greater sophistication.
+
+---
+
+### Implementation Status
+**✅ Milestone Achieved**: Spatial memory prevents clustering
+**✅ Systematic Coverage**: All perimeter regions targeted sequentially  
+**✅ Distance Weighting**: Proximity penalties drive exploration outward
+**🔄 Next Phase**: Gravity-influenced movement dynamics and broader exploration patterns
+
+*This represents a foundational breakthrough in autonomous territorial exploration behavior for electromagnetic field mapping installations.*
