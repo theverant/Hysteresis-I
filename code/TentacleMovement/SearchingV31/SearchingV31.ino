@@ -41,7 +41,7 @@ const int servoYPin = 6;  // PWM pin for Y-axis servo
 
 // ===== MASTER TIMING CONTROLS =====
 // Central speed multiplier for easy global timing adjustments
-const float MASTER_SPEED = 1.0;  // Global speed multiplier
+const float MASTER_SPEED = 0.1;  // Global speed multiplier
 
 // REST STATE TIMING - Energy regeneration phase
 const float REST_ENERGY_RATE = 0.5 * MASTER_SPEED;    // Energy gain per update cycle
