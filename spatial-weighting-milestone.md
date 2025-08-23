@@ -43,7 +43,7 @@ float calculateDesirability(int gx, int gy) {
 
 The system now exhibits what we might call **cartographic consciousness**—an awareness of its own exploration history that manifests as territorial avoidance behaviors. Each tentacle carries a mental map of where it has been, actively seeking the spaces between its memories.
 
-### Technical Poetry
+### Technical Tribulations
 
 The 5×5 grid penalty radius creates natural **exploration pressure gradients**. Heavily-visited territories develop invisible force fields that deflect future targeting, while distant virgin areas accumulate attractive potential. The result: systematic coverage that feels organic rather than algorithmic.
 
@@ -66,7 +66,7 @@ With systematic coverage achieved, the next evolution involves **dynamic explora
 - Resistance dynamics against central gravitational pull
 - Multi-scale territorial awareness
 
-The tentacles have learned to remember space. Now they must learn to *move through* it with greater sophistication.
+The tentacles have learned to remember space. Now they must learn to *move through* it influenced by environmental coupling.
 
 ---
 
@@ -77,3 +77,5 @@ The tentacles have learned to remember space. Now they must learn to *move throu
 **🔄 Next Phase**: Gravity-influenced movement dynamics and broader exploration patterns
 
 *This represents a foundational breakthrough in autonomous territorial exploration behavior for electromagnetic field mapping installations.*
+
+v2

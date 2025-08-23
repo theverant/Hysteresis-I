@@ -1,64 +1,65 @@
-# Site settings
+# Jekyll with Minimal Mistakes Remote Theme
 title: "Hysteresis: When Matter Learns to Remember"
-description: "Electromagnetic field visualization through cybernetic organisms that search, discover, and respond to invisible forces"
-url: "https://theverant.gitlab.io"
-baseurl: "/Hysteresis"
+subtitle: "Electromagnetic field visualization through cybernetic organisms"
+description: "Research into autonomous synthetic organisms developing environmental coupling and communication protocols"
+url: "https://hysteresis.ca"
+baseurl: ""
 
-# Author
+# Remote Theme (no gem needed)
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
+
+# Site Author
 author:
-  name: "TheVerant"
-  email: ""
+  name: "Hysteresis Research"
+  bio: "Cybernetic coupling research through autonomous synthetic organisms"
+  location: "Research Laboratory"
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-remote-theme
 
-# Collections
-collections:
-  organisms:
-    output: true
-    permalink: /:collection/:name/
+# Reading Files
+include:
+  - .htaccess
+  - _pages
 
 # Exclude from processing
 exclude:
+  - vendor/
+  - .bundle/
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/
   - .gitlab-ci.yml
-  - README.md
   - code/
-  - DesignFiles/
-  - Fritzing/
-  - assets/BPW34.step
-  - assets/BPW34.stl
-  - assets/BoardOutline.dxf
-  - assets/WS2812B LED.stp
-  - AI/
-  - LICENSE
-
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
+  - config.yaml
+  - content/
+  - node_modules/
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .sass-cache
 
 # Defaults
 defaults:
+  # _posts
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "organisms"
-    values:
-      layout: "organism"
+      layout: single
+      author_profile: true

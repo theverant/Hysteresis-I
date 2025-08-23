@@ -1,0 +1,65 @@
+# Main navigation
+main:
+  - title: \"Research Overview\"
+    url: /
+  - title: \"Organisms\"
+    url: /species/
+  - title: \"Development\"
+    url: /research/
+  - title: \"Technical Documentation\"
+    url: /technical/
+  - title: \"Repository\"
+    url: \"https://gitlab.com/theverant/hysteresis\"
+
+# Species sidebar navigation
+species:
+  - title: \"Cybernetic Organisms\"
+    children:
+      - title: \"Hysteresis I\"
+        url: /species/hysteresis-i/
+      - title: \"Hysteresis II\" 
+        url: /species/hysteresis-ii/
+      - title: \"Species Evolution\"
+        url: /species/evolution/
+      - title: \"Comparative Analysis\"
+        url: /species/analysis/
+
+# Research sidebar navigation  
+research:
+  - title: \"Research Process\"
+    children:
+      - title: \"Theoretical Framework\"
+        url: /research/hysteresis-phenomena/
+      - title: \"Machine Communication\"
+        url: /research/machine-communication/
+      - title: \"Environmental Coupling\"
+        url: /research/environmental-coupling/
+      - title: \"Anthropomorphic Failures\"
+        url: /research/anthropomorphic-failures/
+      - title: \"Metabolic Aesthetics\"
+        url: /research/metabolic-aesthetics/
+      - title: \"Development Strategy\"
+        url: /research/documentation-development/
+      - title: \"Kim Comparative Analysis\"
+        url: /research/kim-comparative-analysis/
+      - title: \"Agent Handoff Process\"
+        url: /research/agent-handoff/
+      - title: \"OpenFrameworks Visualization\"
+        url: /research/openframeworks-visualization/
+
+# Technical sidebar navigation
+technical:
+  - title: \"Technical Documentation\"
+    children:
+      - title: \"Design Evolution\"
+        url: /technical/design-evolution/
+      - title: \"Spatial Weighting\"
+        url: /technical/spatial-weighting/
+      - title: \"Technical Topology\"
+        url: /technical/technical-topology/
+      - title: \"Hardware Specifications\"
+        url: /technical/hardware/
+      - title: \"Software Architecture\"
+        url: /technical/software/
+      - title: \"Communication Protocols\"
+        url: /technical/protocols/

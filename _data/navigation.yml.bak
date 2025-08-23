@@ -1,0 +1,16 @@
+# main links
+main:
+  - title: "Home"
+    url: /Hysteresis/
+  - title: "Hysteresis I"
+    url: /Hysteresis/hysteresis-i/
+  - title: "Hysteresis II"
+    url: /Hysteresis/hysteresis-ii/
+  - title: "Design Evolution"
+    url: /Hysteresis/h1-design-evolution/
+  - title: "Technical Docs"
+    url: /Hysteresis/technical-topology/
+  - title: "Project Overview"
+    url: /Hysteresis/project_overview/
+  - title: "GitLab"
+    url: "https://gitlab.com/theverant/Hysteresis"

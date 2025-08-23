@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<SERVO_CONTROL>
+	<BASE_XY_SERVOS>
+		<Base_X>99.5408</Base_X>
+		<Base_Y>33.6224</Base_Y>
+	</BASE_XY_SERVOS>
+	<TIP_XY_SERVOS>
+		<Tip_X>101.276</Tip_X>
+		<Tip_Y>90</Tip_Y>
+	</TIP_XY_SERVOS>
+	<HORIZONTAL_COMPENSATION>
+		<Enable>0</Enable>
+		<Ratio>1</Ratio>
+		<Offset>0</Offset>
+	</HORIZONTAL_COMPENSATION>
+	<RECORD_POSITIONS>0</RECORD_POSITIONS>
+</SERVO_CONTROL>

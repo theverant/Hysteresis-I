@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: single
 title: "Hysteresis II"
 description: "Radio-centric communicator with extended temporal consciousness"
+excerpt: "Electromagnetic archaeology through multi-frequency communication and persistent relationships"
 ---
 
 # Hysteresis II

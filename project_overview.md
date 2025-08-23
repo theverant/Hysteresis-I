@@ -49,20 +49,20 @@ description: "Comprehensive overview of the Hysteresis electromagnetic field vis
 
 # Hysteresis - When Matter Learns to Remember
 
-**Hysteresis** transforms the secret life of electromagnetic fields into visible entanglement through robotic tentacles that search, discover, and respond to forces around them. This kinetic installation explores how matter remembers—the way magnetic domains hold onto their history, creating behaviors that seem almost... personal.
+**Hysteresis** transforms the secret life of electromagnetic fields into visible entanglement through robotic tentacles that search, discover, and respond to forces around them. This kinetic installation explores how matter remembers—the way magnetic domains hold onto their history, creating behaviours that seem almost... alive.
 
-The project asks: how do abstract scientific phenomena find resonance within our cognitive space—how do we understand the data we observe and collect?  What emerges is a dialogue between light and movement, where servo-controlled appendages conduct intricate signal exchanges guided by the mathematics of magnetic memory.  Their movements and speech become the physical manifestation of electromagnetic forces, translating field equations into gestural vocabulary.
+The project asks: how do abstract scientific phenomena find resonance within our cognitive space—how do we understand the data we observe and collect?  What emerges is a dialogue between light and movement, where electro-mechanical appendages conduct intricate signal exchanges guided by the mathematics of magnetic memory and environmental coupling.  Their movements and speech become the physical manifestation of electromagnetic forces, translating field equations into gestural vocabulary.
 
 ### Conceptual Choreography
 - **Electromagnetic Translation**: Converting field equations into gestural vocabulary
-- **Memory Made Visible**: Hysteresis curves become patterns of light that linger and fade
-- **Mechanical Intimacy**: Servo movements that search, approach, and align with organic curiosity
-- **Responsive Ecosystems**: Multiple entities creating emergent conversations through proximity
+- **Memory Made Visible**: Hysteresis curves become overlapping patterns of light that linger and fade
+- **Mechanical Intimacy**: Motor movements that search, approach, and align with organic curiosity
+- **Responsive Ecosystems**: Multiple entities creating emergent conversations through proximity and interaction
 
 ### Aesthetic Intention
-- **Organic Automation**: Tentacles that move like living things discovering their environment
-- **Temporal Accumulation**: Complex behaviors building from simple attraction algorithms  
-- **Atmospheric Immersion**: LED arrays creating responsive environmental moods that shift with field interactions
+- **Organic Automation**: Robots that move like living things discovering their environment
+- **Temporal Accumulation**: Unscripted behaviours building from simple attraction algorithms  
+- **Atmospheric Immersion**: Actions creating responsive environmental moods that shift with field interactions
 - **Patient Narratives**: Slow revelations rewarding extended observation
 
 ## Technical Topology
@@ -70,9 +70,9 @@ The project asks: how do abstract scientific phenomena find resonance within our
 ### The Physical Orchestra
 
 #### Movement Architecture
-* **Arduino Nano**: The nervous system coordinating behavior
-* **Servo Actuators**: X/Y positioning (pins D3, D5) with naturalistic drift patterns
-* **Search Algorithms**: Clock-sweep motion layered with Perlin noise for biological authenticity
+* **Micro Controller**: The nervous system coordinating behavior
+* **Actuators**: Motos controlling X/Y positioning with naturalistic drift patterns
+* **Search Algorithms**: Sweep motion layered with Perlin noise for biological authenticity
 
 #### Light Vocabulary
 * **WS2812 RGB LEDs**: Three points per tentacle creating field visualization language
@@ -80,13 +80,10 @@ The project asks: how do abstract scientific phenomena find resonance within our
 * **Hysteresis Curves**: 16-step brightness patterns encoding magnetic memory into visual rhythm
 
 #### Environmental Sensing
-* **Photodiode Detection**: Single sensor (pin A2) with transimpedance amplification
+* **Photodiode Detection**: Single sensor with transimpedance amplification
 * **Spectral Decomposition**: Software parsing of RGB signal components into distinct behaviors
 * **Adaptive Response**: Real-time adjustment to ambient lighting conditions
 
-#### Human Interface
-* **Manual Override**: Joystick control (pins A0, A1, D2) for direct tentacle guidance
-* **Serial Communication**: Live parameter adjustment and system monitoring
 
 ### Behavioral Architecture
 
@@ -140,7 +137,7 @@ const unsigned long fadeSpeedPattern[] = {
 
 ### Performance Parameters
 - **Response Rate**: 20Hz sensor sampling for fluid responsiveness
-- **Movement Range**: Complete 360° rotation on both servo axes
+- **Movement Range**:  Mechanically constrained translation of rotational to linear 
 - **Detection Radius**: 1-3 meter effective sensing envelope
 - **Color Resolution**: 24-bit RGB with 150/255 brightness ceiling for comfort
 - **Pattern Memory**: 16-step hysteresis curves with individual LED phase relationships
@@ -173,7 +170,7 @@ This project develops approaches for:
 - **Scalable Series**: Framework expandable to multiple interacting units
 
 ### Development Horizons
-- **Swarm Intelligence**: Multi-tentacle coordination and emergent behaviors
+- **Swarm Intelligence**: Multi-organism coordination and emergent behaviors
 - **Environmental Integration**: Temperature, humidity, sound as input modalities
 - **Haptic Simulation**: Physical force representation of magnetic attraction
 - **Audio Synthesis**: Sound generation driven by field interaction patterns
@@ -191,7 +188,7 @@ Current implementation (v0.15) features:
 - Environmental brightness adaptation for optimal visibility
 
 ### Hardware Philosophy
-- Single-board control system managing all subsystems efficiently
+- Single-board control system per organism managing all subsystems efficiently
 - Modular sensor architecture enabling future capability expansion
 - Standard servo interfaces ensuring reliable mechanical positioning
 - Addressable LED arrays providing scalable visual complexity
@@ -204,4 +201,4 @@ Current implementation (v0.15) features:
 
 ---
 
-**v2**
+**v3**

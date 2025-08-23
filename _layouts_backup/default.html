@@ -1,0 +1,148 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f6f0;
+            color: #2a2a2a;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Arial', sans-serif;
+            color: #1a1a1a;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+        
+        h1 {
+            border-bottom: 3px solid #2a2a2a;
+            padding-bottom: 0.3em;
+        }
+        
+        h2 {
+            border-bottom: 1px solid #666;
+            padding-bottom: 0.2em;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ccc;
+            margin: 1.5em 0;
+            padding: 0 1em;
+            background-color: #f0f0f0;
+            font-style: italic;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1em auto;
+        }
+        
+        .navigation {
+            margin-bottom: 2em;
+            padding: 1em;
+            background-color: #e8e6e0;
+            border-radius: 5px;
+        }
+        
+        .navigation a {
+            margin-right: 1em;
+            font-weight: bold;
+        }
+        
+        .footer {
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .organism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+            margin: 2em 0;
+        }
+        
+        .organism-card {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .organism-card h3 {
+            margin-top: 0;
+        }
+        
+        /* Technical documentation styling */
+        .tech-spec {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+        
+        .tech-spec h4 {
+            margin-top: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/hysteresis-i.html' | relative_url }}">Hysteresis I</a>
+        <a href="{{ '/hysteresis-ii.html' | relative_url }}">Hysteresis II</a>
+        <a href="{{ '/project_overview.html' | relative_url }}">Project Overview</a>
+        <a href="{{ '/technical-topology.html' | relative_url }}">Technical</a>
+        <a href="{{ '/h1-design-evolution.html' | relative_url }}">Design Evolution</a>
+    </nav>
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "TheVerant" }} | {{ site.title }}</p>
+        <p><a href="https://gitlab.com/theverant/Hysteresis">View Project on GitLab</a></p>
+    </footer>
+</body>
+</html>

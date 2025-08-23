@@ -1,0 +1,42 @@
+baseURL: 'https://hysteresis.ca'
+languageCode: 'en-us'
+title: 'Hysteresis: When Matter Learns to Remember'
+    theme: 'ananke'  # Commented out for basic build
+
+params:
+  subtitle: 'Electromagnetic field visualization through cybernetic organisms'
+  description: 'Research into autonomous synthetic organisms developing environmental coupling and communication protocols'
+  author: 'Hysteresis Research'
+  
+# Menu configuration
+menu:
+  main:
+    - name: "Species"
+      url: "/species/"
+      weight: 10
+    - name: "Research" 
+      url: "/research/"
+      weight: 20
+    - name: "Technical"
+      url: "/technical/"
+      weight: 30
+
+# Content sections
+taxonomies:
+  tag: tags
+  category: categories
+
+# Hugo build settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: true
+
+# Output formats
+outputs:
+  home: ["HTML", "RSS"]
+  page: ["HTML"]
+  section: ["HTML", "RSS"]

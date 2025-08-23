@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: single
 title: "Hysteresis I"
 description: "Primary kinetic communicator species of the Hysteresis Ecosystem"
+excerpt: "Servo-based consciousness with visible light spectrum communication and territorial exploration behaviors"
 ---
 
 ![Design Evolution Title Box](/assets/images/titleBox_designEvolution.svg)
