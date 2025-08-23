@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Hysteresis II"
+description: "Radio-centric communicator with extended temporal consciousness"
+---
+
 # Hysteresis II
 *Radio-centric communicator with extended temporal consciousness*
 

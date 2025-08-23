@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Hysteresis I"
+description: "Primary kinetic communicator species of the Hysteresis Ecosystem"
+---
+
 ![Design Evolution Title Box](/assets/images/titleBox_designEvolution.svg)
 
 # Hysteresis I

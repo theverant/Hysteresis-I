@@ -1,0 +1,64 @@
+# Site settings
+title: "Hysteresis: When Matter Learns to Remember"
+description: "Electromagnetic field visualization through cybernetic organisms that search, discover, and respond to invisible forces"
+url: "https://theverant.gitlab.io"
+baseurl: "/Hysteresis"
+
+# Author
+author:
+  name: "TheVerant"
+  email: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  organisms:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .gitlab-ci.yml
+  - README.md
+  - code/
+  - DesignFiles/
+  - Fritzing/
+  - assets/BPW34.step
+  - assets/BPW34.stl
+  - assets/BoardOutline.dxf
+  - assets/WS2812B LED.stp
+  - AI/
+  - LICENSE
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "organisms"
+    values:
+      layout: "organism"

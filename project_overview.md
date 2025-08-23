@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Project Overview"
+description: "Comprehensive overview of the Hysteresis electromagnetic field visualization project"
+---
+
 <svg viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "H1 Design Evolution"
+description: "Morphological archaeology documenting H1's physical metamorphosis from crude assemblage to refined cybernetic anatomy"
+---
+
 ![Design Evolution Title Box](/assets/images/titleBox_designEvolution.svg)
 
 ## Evolutionary Thesis

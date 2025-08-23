@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Technical Topology"
+description: "Spatial architecture of cybernetic communication networks"
+---
+
 # Technical Topology
 *Spatial architecture of cybernetic communication networks*
 
